@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financieras.Common
+namespace Financieras.Common.Classes
 {
-    public class Class1
+    public class InteresCompuesto
     {
+
     }
 }
