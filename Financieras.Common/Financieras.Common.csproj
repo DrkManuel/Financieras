@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="Classes\InteresCompuesto.cs" />
     <Compile Include="Classes\InteresSimple.cs" />
+    <Compile Include="Models\Interes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

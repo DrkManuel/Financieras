@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Financieras.Views.InteresPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding Interes}">
+            <ListView
+                ItemsSource="{Binding Interes}">
+                
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
