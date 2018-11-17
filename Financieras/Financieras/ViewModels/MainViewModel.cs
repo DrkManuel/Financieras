@@ -9,12 +9,15 @@ namespace Financieras.ViewModels
     {
         public MainViewModel()
         {
-            this.Interes = new InteresViewModel();
+            this.Calculadora = new CalculadoraViewModel();
             this.Simple = new SimpleViewModel();
+            this.Compuesto = new CompuestoViewModel();
         }
 
-        public InteresViewModel Interes { get; set; }
+        public CalculadoraViewModel Calculadora { get; set; }
 
         public SimpleViewModel Simple { get; set; }
+
+        public CompuestoViewModel Compuesto { get; set; }
     }
 }

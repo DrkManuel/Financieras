@@ -32,7 +32,7 @@
                            Keyboard="Numeric"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Taza del Impuesto"
+                    <Label Text="Tasa de Interés"
                            VerticalTextAlignment="Center"
                            WidthRequest="150"
                            HorizontalTextAlignment="Center"/>
@@ -43,7 +43,7 @@
                            Keyboard="Numeric"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Periodo de Tiempo"
+                    <Label Text="Número de Periodos"
                            VerticalTextAlignment="Center"
                            WidthRequest="150"
                            HorizontalTextAlignment="Center"/>
@@ -69,16 +69,16 @@
                         BackgroundColor="#355C7D"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
-                <Button Command="{Binding CalcularTazaImpuesto}"
-                        Text="Calcular Taza"
+                <Button Command="{Binding CalcularTasaInteres}"
+                        Text="Calcular Tasa"
                         BorderRadius="20"
                         WidthRequest="225"
                         TextColor="#FFFFFF"
                         BackgroundColor="#355C7D"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
-                <Button Command="{Binding CalcularPeriodoTiempo}"
-                        Text="Calcular Periodo"
+                <Button Command="{Binding CalcularNumeroPeriodos}"
+                        Text="Calcular Número de Periodos"
                         BorderRadius="20"
                         WidthRequest="225"
                         TextColor="#FFFFFF"

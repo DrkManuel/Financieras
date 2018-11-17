@@ -15,10 +15,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\CalculadoraPage.xaml.cs">
+      <DependentUpon>CalculadoraPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Views\CompuestoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\InteresPage.xaml">
+    <EmbeddedResource Update="Views\CalculadoraPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SimplePage.xaml">

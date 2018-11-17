@@ -12,7 +12,7 @@ namespace Financieras.ViewModels
     {
         public SimpleViewModel()
         {
-
+                        
         }
 
         #region Properties
@@ -58,7 +58,25 @@ namespace Financieras.ViewModels
 
         private void CalcularVF()
         {
-            Resultado = "Hola";
+            if (double.IsNaN(VP))
+            {
+                Resultado = "Ingresa el valor del Valor Presente";
+                return;
+            }
+
+            if (double.IsNaN(N))
+            {
+                Resultado = "Ingresa el valor del Número de Periodos";
+                return;
+            }
+
+            if (double.IsNaN(I))
+            {
+                Resultado = "Ingresa el valor de la Tasa de Interés";
+                return;
+            }
+
+            Resultado = "Valor Futuro = " + (VP * (1 + I * N));
         }
 
         public ICommand CalcularValorPresente
@@ -71,10 +89,35 @@ namespace Financieras.ViewModels
 
         private void CalcularVP()
         {
-            Resultado = "Hola 2";
+            if (double.IsNaN(VF))
+            {
+                Resultado = "Ingresa el valor del Valor Futuro";
+                return;
+            }
+
+            if (double.IsNaN(N))
+            {
+                Resultado = "Ingresa el valor del Número de Periodos";
+                return;
+            }
+
+            if (double.IsNaN(I))
+            {
+                Resultado = "Ingresa el valor de la Tasa de Interés";
+                return;
+            }
+
+            if ((1 + N * I) == 0)
+            {
+                Resultado = "Si la Tasa de Interés o el Número de Periodos es igual a 1, el otro no puede ser igual a -1";
+            }
+            else
+            {
+                Resultado = "Valor Presente = " + (VF / (1 + N * I));
+            }
         }
 
-        public ICommand CalcularTazaImpuesto
+        public ICommand CalcularTasaInteres
         {
             get
             {
@@ -84,10 +127,35 @@ namespace Financieras.ViewModels
 
         private void CalcularI()
         {
-            throw new NotImplementedException();
+            if (double.IsNaN(VF))
+            {
+                Resultado = "Ingresa el valor del Valor Futuro";
+                return;
+            }
+
+            if (double.IsNaN(VP))
+            {
+                Resultado = "Ingresa el valor del Valor Presente";
+                return;
+            }
+
+            if (double.IsNaN(N))
+            {
+                Resultado = "Ingresa el valor del Número de Periodos";
+                return;
+            }
+
+            if (VP == 0 || N == 0)
+            {
+                Resultado = "El Valor Presente o el Número de Periodos no pueden ser 0";
+            }
+            else
+            {
+                Resultado = "Tasa de Interés = " + (((VF / VP) - 1) * (1 / N));
+            }
         }
 
-        public ICommand CalcularPeriodoTiempo
+        public ICommand CalcularNumeroPeriodos
         {
             get
             {
@@ -97,7 +165,32 @@ namespace Financieras.ViewModels
 
         private void CalcularN()
         {
-            throw new NotImplementedException();
+            if (double.IsNaN(VF))
+            {
+                Resultado = "Ingresa el valor del Valor Futuro";
+                return;
+            }
+
+            if (double.IsNaN(VP))
+            {
+                Resultado = "Ingresa el valor del Valor Presente";
+                return;
+            }
+
+            if (double.IsNaN(I))
+            {
+                Resultado = "Ingresa el valor de la Tasa de Interés";
+                return;
+            }
+
+            if (VP == 0 || I == 0)
+            {
+                Resultado = "El Valor Presente o la Tasa de Interés no pueden ser 0";
+            }
+            else
+            {
+                Resultado = "Número de Periodos = " + (((VF / VP) - 1) * (1 / I));
+            }
         }
         #endregion
     }

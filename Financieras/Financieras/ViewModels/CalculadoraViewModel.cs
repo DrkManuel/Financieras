@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace Financieras.ViewModels
 {
-    public class InteresViewModel
+    public class CalculadoraViewModel
     {
-        public InteresViewModel()
+        public CalculadoraViewModel()
         {
             
         }

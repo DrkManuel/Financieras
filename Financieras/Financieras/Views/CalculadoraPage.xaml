@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Financieras.Views.InteresPage"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Calculadora">
     <ContentPage.Content>
-        <ScrollView BindingContext="{Binding Interes}">
+        <ScrollView BindingContext="{Binding Calculadora}">
             <StackLayout Padding="8"
                          Spacing="10"
                          Orientation="Vertical">
@@ -13,7 +14,7 @@
                        FontSize="25"
                        VerticalTextAlignment="Center"
                        HorizontalTextAlignment="Center"
-                       Text="¡Bienvenido a Calculadora Financieras!"/>
+                       Text="¡Bienvenido a Calculadora Financiera!"/>
                 <Button Command="{Binding SimpleCommand}"
                         Text="Interés Simple"
                         BorderRadius="20"
