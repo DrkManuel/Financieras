@@ -4,12 +4,35 @@
              x:Class="Financieras.Views.InteresPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <StackLayout
-            BindingContext="{Binding Interes}">
-            <ListView
-                ItemsSource="{Binding Interes}">
-                
-            </ListView>
-        </StackLayout>
+        <ScrollView BindingContext="{Binding Interes}">
+            <StackLayout Padding="8"
+                         Spacing="10"
+                         Orientation="Vertical">
+                <Label TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="25"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="¡Bienvenido a Calculadora Financieras!"/>
+                <Button Command="{Binding SimpleCommand}"
+                        Text="Interés Simple"
+                        BorderRadius="20"
+                        WidthRequest="225"
+                        HeightRequest="40"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#355C7D"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                <Button Command="{Binding CompuestoCommand}"
+                        Text="Interés Compuesto"
+                        BorderRadius="20"
+                        WidthRequest="225"
+                        HeightRequest="40"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#355C7D"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

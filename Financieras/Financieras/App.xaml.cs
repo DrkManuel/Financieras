@@ -11,7 +11,7 @@ namespace Financieras
         {
             InitializeComponent();
 
-            MainPage = new InteresPage();
+            MainPage = new NavigationPage(new InteresPage());
         }
 
         protected override void OnStart()

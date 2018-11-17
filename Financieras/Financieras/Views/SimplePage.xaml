@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Financieras.Views.SimplePage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Interés Simple">
+    <ContentPage.Content>
+        <ScrollView BindingContext="{Binding Simple}">
+            <StackLayout Padding="8"
+                         Spacing="10"
+                         Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Valor Futuro"
+                           VerticalTextAlignment="Center"
+                           WidthRequest="150"
+                           HorizontalTextAlignment="Center"/>
+                    <Entry Placeholder="VF"
+                           Text="{Binding VF, Mode=TwoWay}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Valor Presente"
+                           VerticalTextAlignment="Center"
+                           WidthRequest="150"
+                           HorizontalTextAlignment="Center"/>
+                    <Entry Placeholder="VP"
+                           Text="{Binding VP, Mode=TwoWay}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Taza del Impuesto"
+                           VerticalTextAlignment="Center"
+                           WidthRequest="150"
+                           HorizontalTextAlignment="Center"/>
+                    <Entry Placeholder="i"
+                           Text="{Binding I, Mode=TwoWay}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Periodo de Tiempo"
+                           VerticalTextAlignment="Center"
+                           WidthRequest="150"
+                           HorizontalTextAlignment="Center"/>
+                    <Entry Placeholder="n"
+                           Text="{Binding N, Mode=TwoWay}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           Keyboard="Numeric"/>
+                </StackLayout>
+                <Button Command="{Binding CalcularValorFuturo}"
+                        Text="Calcular Valor Futuro"
+                        BorderRadius="20"
+                        WidthRequest="225"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#355C7D"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                <Button Command="{Binding CalcularValorPresente}"
+                        Text="Calcular Valor Presente"
+                        BorderRadius="20"
+                        WidthRequest="225"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#355C7D"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                <Button Command="{Binding CalcularTazaImpuesto}"
+                        Text="Calcular Taza"
+                        BorderRadius="20"
+                        WidthRequest="225"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#355C7D"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                <Button Command="{Binding CalcularPeriodoTiempo}"
+                        Text="Calcular Periodo"
+                        BorderRadius="20"
+                        WidthRequest="225"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#355C7D"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                <Label Text="{Binding Resultado}"
+                       BackgroundColor="#000000"
+                       TextColor="#FFFFFF"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
